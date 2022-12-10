@@ -16,18 +16,10 @@ app.listen(8080, () => {
   console.log("サーバー起動中");
 });
 
-//GETリクエストの設定
-//'/get'でアクセスされた時に、JSONとログを出力するようにする
-// app.get('/', (req, res)=> {
-//     res.json({ "pet": "dog"});
-//     console.log('GETリクエストを受け取りました')
-//     res.end();
-// })
 
-//POSTリクエストの作成
-app.post("/", (req, res) => {
-    //HTTPリクエストのボディを出力
-    console.log(req.body);
-    console.log("POSTリクエストを受け取りました");
+app.get('/', (req, res)=> {
+    res.json({ "pet": "dog"});
+    console.log('GETリクエストを受け取りました')
     res.end();
-  });
+})
+
